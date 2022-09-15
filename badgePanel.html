@@ -1,0 +1,23 @@
+<template>
+	<template if:true={error} >
+		<div data-id="errorDiv">
+			<span>Implement error msg here c-error-panel for example or handle in js</span>
+		</div>
+	</template>
+
+	<template if:false={error}>
+		<article>
+			<div class="slds-card__body slds-card slds-m-vertical_none slds-var-p-horizontal_small">
+				<template for:each={badgeData} for:item="badge">
+					<lightning-badge
+						label={badge.label}
+						class={badge.class}
+						icon-name={badge.icon}
+						key={badge.label}
+					></lightning-badge>
+				</template>
+			</div>
+		</article>
+	</template>	
+
+</template>

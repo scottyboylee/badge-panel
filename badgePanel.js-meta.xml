@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+  <apiVersion>55.0</apiVersion>
+  <isExposed>true</isExposed>
+  <masterLabel>Badge Panel</masterLabel>
+  <description>A panel that highlights configured fields as colorful badges</description>
+  <targets>
+    <target>lightning__RecordPage</target>
+  </targets>
+  <targetConfigs>
+    <targetConfig targets="lightning__RecordPage">
+      <property
+        name="fieldNames"
+        label="Fields"
+        type="String"
+        required="true"
+        default="Name"
+        description="Comma deliminated, api name of fields on current object to display. 
+          User must have read access to these fields."
+        ></property>
+        <property
+        name="iconNames"
+        label="Icons "
+        type="String"
+        required="true"
+        default="utility:success"
+        description="Comma deliminated, icon to use for fields above.
+          See https://www.lightningdesignsystem.com/icons/ avaliable icons."
+        ></property>
+        <property
+        name="colors"
+        label="Colour of Badge"
+        type="String"
+        required="true"
+        default="Success"
+        description="Comma Deliminated, color to use for each badge.
+          Valid values are Default, Darker, Lightest, Success, Warning or Error. 
+          Please see https://www.lightningdesignsystem.com/components/badges/?variant=base#Colors"
+        ></property>
+        <property
+        name="modes"
+        label="Mode of Badge"
+        type="String"
+        required="true"
+        default="Label"
+        description="Comma deliminated, mode to use for each badge.
+          This determines what text is displayed in the badge.
+          Valid values are Label, Value or Both"
+        ></property>
+    </targetConfig>
+  </targetConfigs>
+</LightningComponentBundle>
