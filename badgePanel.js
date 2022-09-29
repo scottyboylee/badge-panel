@@ -74,14 +74,17 @@ export default class BadgePanel extends LightningElement {
       return
     }
     this.badgeData = new Array()
-    for (var index=0;index < this.fieldNameArray.length; index++) {
+    for (let index = 0; index < this.fieldNameArray.length; index++) {
       //only create badge if there is a value.
       let fieldName = this.fieldNameArray[index]
       if (!this.currentRecordData.fields[fieldName].value){
         //No value or false
         continue
       }
-      let badgeObject = new Object
+      let badgeObject = {}
+
+      badgeObject.key = index
+      badgeObject.icon = this.iconArray[index]
 
       switch(this.colorArray[index]){
         case 'Warning':
@@ -101,8 +104,6 @@ export default class BadgePanel extends LightningElement {
           break;
       }
 
-      badgeObject.icon = this.iconArray[index]
-
       switch(this.modeArray[index]){
         case 'Label':
           badgeObject.label = this.currentObjectMeta.fields[fieldName].label
@@ -113,6 +114,8 @@ export default class BadgePanel extends LightningElement {
         case 'Both':
           badgeObject.label = this.currentObjectMeta.fields[fieldName].label + ': ' + this.currentRecordData.fields[fieldName].value
           break;
+        default:
+          badgeObject.label = this.currentObjectMeta.fields[fieldName].label + ': ' + this.currentRecordData.fields[fieldName].value
       }
       this.badgeData.push(badgeObject)
     }

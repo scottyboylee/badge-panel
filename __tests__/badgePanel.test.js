@@ -91,7 +91,7 @@ describe('c-badge-panel', () => {
     element.fieldNames = 'Site,Email,Name'
     element.iconNames = 'utility:wanring,utility:error,utility:delete'
     element.colors = 'Warning,Error,Default'
-    element.modes = 'Both,Both,Both'
+    element.modes = 'Both,Both,BothWrong'
     element.objectApiName = 'Account'
     element.recordId = '0017700000ALicvAAD'
 
