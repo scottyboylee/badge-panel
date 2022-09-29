@@ -101,7 +101,6 @@ export default class BadgePanel extends LightningElement {
         case 'Default':
         default:
           badgeObject.class = 'slds-var-m-vertical_small slds-badge'
-          break;
       }
 
       switch(this.modeArray[index]){
@@ -112,8 +111,6 @@ export default class BadgePanel extends LightningElement {
           badgeObject.label = this.currentRecordData.fields[fieldName].value
           break;
         case 'Both':
-          badgeObject.label = this.currentObjectMeta.fields[fieldName].label + ': ' + this.currentRecordData.fields[fieldName].value
-          break;
         default:
           badgeObject.label = this.currentObjectMeta.fields[fieldName].label + ': ' + this.currentRecordData.fields[fieldName].value
       }
