@@ -23,10 +23,10 @@ export default class BadgePanel extends LightningElement {
   error
   currentObjectMeta
   currentRecordData
-  fieldNameArray = new Array()
-  iconArray = new Array()
-  colorArray = new Array()
-  modeArray = new Array()
+  fieldNameArray = []
+  iconArray = []
+  colorArray = []
+  modeArray = []
 
   @track badgeData
 
