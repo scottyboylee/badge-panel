@@ -6,20 +6,18 @@
 	</template>
 
 	<template if:false={error}>
-		<article>
-			<div class="slds-card__body slds-card slds-m-vertical_none slds-var-p-horizontal_small">
-				<template if:true={badgeData}>
-					<template for:each={badgeData} for:item="badge">
-						<lightning-badge
-							label={badge.label}
-							class={badge.class}
-							icon-name={badge.icon}
-							key={badge.key}
-						></lightning-badge>
-					</template>
+		<div class="slds-card__body slds-card slds-m-vertical_none slds-var-p-horizontal_small">
+			<template if:true={badgeData}>
+				<template for:each={badgeData} for:item="badge">
+					<lightning-badge
+						label={badge.label}
+						class={badge.class}
+						icon-name={badge.icon}
+						key={badge.key}
+					></lightning-badge>
 				</template>
-			</div>
-		</article>
+			</template>
+		</div>
 	</template>	
 	
 </template>
