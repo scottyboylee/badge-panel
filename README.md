@@ -1,6 +1,6 @@
 # badgePanel Lightning Web Component
 
-For use in a Salesforce Lightning record page.
+![image](https://user-images.githubusercontent.com/42585718/194082506-419d2856-33b2-4b91-8243-29fc22c44feb.png)
 
 ## Contact me
 **If you do end up using this or found it helpful, or any questions, please reach me on Twitter @scott__l**
